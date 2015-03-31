@@ -1,0 +1,30 @@
+<head>
+  <title>party-planner</title>
+</head>
+
+<body>
+
+<div class="navbar">
+	<a class="navbar-brand" href="#">Party Planner!</a>
+	<ul class="nav navbar-nav">
+		<li class="active">
+			<a href="#">Home</a>
+		</li>
+		<li>
+			<a href="#">Link</a>
+		</li>
+	</ul>
+</div>
+
+
+<div class="container">
+  {{> hello}}
+  </div>
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
