@@ -1,0 +1,22 @@
+<template name="myEvents">
+  <div class="container">
+	<strong>Logged In! </strong>Sweet - you made it!
+	<h2>{{userName}}'s Upcoming Events</h2>
+	{{#each userEvents}}
+		<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{name}}</h3>
+		</div>
+		<div class="panel-body">
+		{{#each guests}}
+			{{#if confirmed}}
+			<ul>
+				<li>{{name}} will bring {{#each items}} {{this}} {{/each}}</li>
+			</ul>
+			{{/if}}
+		 {{/each}}
+		</div>
+	</div>
+	{{/each}}
+</div>
+</template>
