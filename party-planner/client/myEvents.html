@@ -1,22 +1,22 @@
 <template name="myEvents">
   <div class="container">
 	<strong>Logged In! </strong>Sweet - you made it!
-	<h2>{{userName}}'s Upcoming Events</h2>
+	<hr>
+	<h4>{{userName}}'s Upcoming Events</h4>
+	<ul>
 	{{#each userEvents}}
-		<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">{{name}}</h3>
-		</div>
-		<div class="panel-body">
-		{{#each guests}}
-			{{#if confirmed}}
-			<ul>
-				<li>{{name}} will bring {{#each items}} {{this}} {{/each}}</li>
-			</ul>
-			{{/if}}
-		 {{/each}}
-		</div>
-	</div>
+  	<li><a href="{{pathFor route='events.show'}}">{{name}}</a></li>
 	{{/each}}
+	</ul>
+	<hr>
+
+<form action="" method="POST" role="form">
+	<legend>New Event</legend>
+	<div class="form-group">
+		<label for="name">Event Name</label>
+		<input type="text" class="form-control" id="" placeholder="Input field">
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </div>
 </template>

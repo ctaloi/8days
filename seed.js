@@ -9,6 +9,8 @@ var guestList = [
 
 var myEvent = {name: "Eddie's Birthday", hostedBy: partyHost, guests: guestList}
 
+//
+
 var partyHost = Meteor.userId()
 
 var guestList = [

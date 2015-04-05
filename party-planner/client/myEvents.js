@@ -4,5 +4,15 @@ Template.myEvents.helpers({
   },
   userEvents: function () {
   	return Events.find({});
+  },
+  getEvent: function (eventId) {
+  	return Events.find({_id: eventId})
   }
+});
+
+Template.myEvents.events({
+	'click': function () {
+		console.log(this)
+		// ...
+	}
 });
